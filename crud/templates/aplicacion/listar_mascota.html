@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Mascota</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Edad</td>
+                <td>Persona</td>
+            </tr>
+        </thead>
+        <tbody>
+                {%  for mascota in object_list  %}
+            <tr>
+                    <td>{{ mascota.id }}</td>
+                    <td>{{ mascota.nombre }}</td>
+                    <td>{{ mascota.edad }}</td>
+                    <td>{{ mascota.persona.nombre }}</td>
+                {%  endfor  %}
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
